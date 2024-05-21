@@ -1,0 +1,219 @@
+*{
+    user-select: none;
+}
+
+.card{
+    margin: 1rem;
+    background-color:rgb(217, 217, 217);
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.card:hover{
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+img{
+    pointer-events: none;
+}
+
+#pokemon-logo{
+    height: 13vh;
+}
+
+.card-text{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-img-top{
+    object-fit: cover;
+    width: 13rem;
+    display: flex;
+}
+
+header{
+    background-color: #F84E4E;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F84E4E;
+}
+
+footer button{
+    margin: 2%;
+}
+
+#numPag{
+    margin: 2% 8%;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.imgInfo{
+    object-fit:cover;
+    width: 16rem;
+    height: 5rem;
+    display: block;
+}
+
+.titleInfo{
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cardInfo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+
+/*Efecto*/
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalmask:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+     
+}
+
+/*Movimientos*/
+.movedown {
+    margin: 0 auto;
+}
+.rotate {
+    margin: 10% auto;
+    -webkit-transform: scale(-5,-5);
+    transform: scale(-5,-5);
+}
+.resize {
+    margin: 10% auto;
+    width:0;
+    height:0;
+ 
+}
+.modalmask:target .movedown{       
+    margin:10% auto;
+}
+.modalmask:target .rotate{     
+    transform: rotate(360deg) scale(1,1);
+        -webkit-transform: rotate(360deg) scale(1,1);
+}
+ 
+.modalmask:target .resize{
+    width:400px;
+    height:200px;
+}
+
+/*Boton de cerrar*/
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:3px;
+ 
+}
+ 
+.close:hover {
+    background: #FAAC58;
+    color:#222;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 60px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .btn-2 {
+    background: #004dff;
+    background: linear-gradient(0deg, #004dff 0%, #004dff 100%);
+    border: none;
+  }
+  
+  .btn-2:before {
+    height: 0%;
+    width: 2px;
+  }
+  
+  .btn-2:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  }
+  
